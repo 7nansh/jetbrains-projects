@@ -48,8 +48,6 @@ def is_not_num(text):
 current_player = "X"
 
 
-unsuitable_input = True
-
 while True:
     both_win = False
     x_win = False
@@ -107,7 +105,6 @@ while True:
     elif field[co[1]][co[0]] == "X" or field[co[1]][co[0]] == "O":
         print("This cell is occupied! Choose another one!")
     else:
-        unsuitable_input = False
         field[co[1]][co[0]] = current_player
         if current_player == "X":
             current_player = "O"
@@ -115,4 +112,3 @@ while True:
             current_player = "X"
         print_field()
         symbols = "".join(["".join(x) for x in field])
-
